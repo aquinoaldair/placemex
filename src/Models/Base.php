@@ -76,13 +76,14 @@ class Base
         $this->url = $this->url. "/nombre/{$name}";
     }
 
+
     /**
      * @param $word
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return \Illuminate\Support\Collection|string
      */
     public function search($word){
         $this->setSearch($word);
-        return $this->instance->get($this->url);
+        return $this->get();
     }
 
     /**
