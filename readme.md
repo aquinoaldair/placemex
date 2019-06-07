@@ -40,7 +40,7 @@ $placemex->states()->search("word");
 $placemex->municipalities()->findById(100);
 
 #obtener municipio por nombre específico
-$placemex->municipalities()->findById(100);
+$placemex->municipalities()->findByName("mi municipio");
 
 #obtener municipios por busqueda de palabra
 $placemex->municipalities()->search("word");
@@ -54,7 +54,7 @@ $placemex->municipalities()->findByParentId(6);
 $placemex->localities()->findById(100);
 
 #obtener localidad por nombre específico
-$placemex->localities()->findById(100);
+$placemex->localities()->findByName("mi localidad");
 
 #obtener localidades por busqueda de palabra
 $placemex->localities()->search("word");
