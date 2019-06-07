@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Obtener los Estados, Municipios y Localidades de México obtenidos del [INEGI](https://developarts.com/db-estados-municipios-localidades-mexico)
 
 ## Installation
 
@@ -16,6 +16,59 @@ $ composer require aquinoaldair/placemex
 ```
 
 ## Usage
+
+
+```php  
+
+$placemex = new \AquinoAldair\PlaceMex\PlaceMex();  
+
+## ESTADOS
+
+#Obtener todos los estados 
+$placemex->states()->all();
+
+#obtener estado por ID
+$placemex->states()->findById(5);
+
+#obtener estado por nombre específico
+$placemex->states()->findByName("Oaxaca");
+
+#obtener estados por busqueda de palabra
+$placemex->states()->search("word");
+
+## MUNICIPIOS
+
+#obtener municipio por ID
+$placemex->municipalities()->findById(100);
+
+#obtener municipio por nombre específico
+$placemex->municipalities()->findById(100);
+
+#obtener municipios por busqueda de palabra
+$placemex->municipalities()->search("word");
+
+#obtener municipios por ID Estado
+$placemex->municipalities()->findByParentId(6);
+
+## LOCALIDADES
+
+#obtener localidad por ID
+$placemex->localities()->findById(100);
+
+#obtener localidad por nombre específico
+$placemex->localities()->findById(100);
+
+#obtener localidades por busqueda de palabra
+$placemex->localities()->search("word");
+
+#obtener localidades por ID Municipio
+$placemex->localities()->findByParentId(6);
+
+## (EXTRA) OBTENER DATOS POR CODIGO POSTAL 
+$placemex->postalCode()->find(29000);
+
+```
+
 
 ## Change log
 
@@ -37,8 +90,7 @@ If you discover any security related issues, please email author email instead o
 
 ## Credits
 
-- [author name][link-author]
-- [All Contributors][link-contributors]
+- [Aldair Aquino][link-author]
 
 ## License
 
