@@ -1,0 +1,45 @@
+{
+    "name": "aquinoaldair/placemex",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Aldair Aquino",
+            "email": "aquinoaldair@hotmail.com",
+            "homepage": "https://github.com/aquinoaldair"
+        }
+    ],
+    "homepage": "https://github.com/aquinoaldair/placemex",
+    "keywords": ["Laravel", "PlaceMex"],
+    "require": {
+        "illuminate/support": "~5",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/psr-http-message-bridge": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AquinoAldair\\PlaceMex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AquinoAldair\\PlaceMex\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AquinoAldair\\PlaceMex\\PlaceMexServiceProvider"
+            ],
+            "aliases": {
+                "PlaceMex": "AquinoAldair\\PlaceMex\\Facades\\PlaceMex"
+            }
+        }
+    }
+}
