@@ -16,13 +16,14 @@ class Locality extends Base implements Findeable
         parent::__construct(self::NAME);
     }
 
+
     /**
      * @param $id
-     * @return $this
+     * @return \Illuminate\Support\Collection|string
      */
     public function findByParentId($id){
         $municipality = Municipality::NAME;
         $this->url = $this->url."/{$municipality}/id/{$id}";
-        return $this;
+        return $this->get();
     }
 }
