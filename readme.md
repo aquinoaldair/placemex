@@ -89,6 +89,7 @@ If you discover any security related issues, please email author email instead o
 ## Credits
 
 - [Aldair Aquino][link-author]
+- aquinoaldair@hotmail.com
 
 ## License
 
