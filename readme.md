@@ -1,5 +1,5 @@
 # PlaceMex
-
+![abandoned](https://img.shields.io/badge/-abandoned-red)
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 
